@@ -1,5 +1,7 @@
 package com.howtodoinjava.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Employee {
 
 	public Employee() {
@@ -12,8 +14,11 @@ public class Employee {
 		this.lastName = lastName;
 		this.email = email;
 	}
-	
+
+	@JsonIgnore
 	private Integer id;
+
+	@JsonIgnore
 	private String firstName;
 	private String lastName;
 	private String email;
